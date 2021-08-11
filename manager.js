@@ -33,25 +33,25 @@ bottom.appendChild(newButton)
 
 
 var request = new XMLHttpRequest()
-request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
+request.open('GET', 'https://character-database.becode.xyz/characters', true)
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
   if (request.status >= 200 && request.status < 400) {
-    data.forEach((movie) => {
+    data.forEach((character) => {
       const card = document.createElement('div')
       card.setAttribute('class', 'card')
 
       const image = document.createElement('img')
       image.setAttribute('class','rounded' )
-      image.src = movie.img
+      image.src = character.image
 
       const h1 = document.createElement('h2')
-      h1.textContent = movie.title
+      h1.textContent = character.name
 
       const p = document.createElement('p')
-      movie.description = movie.description.substring(0, 300)
-      p.textContent = `${movie.description}...`
+      character.shortDescription = character.shortDescription.substring(0, 300)
+      p.textContent = `${character.shortDescription}...`
 
       const charaButton = document.createElement('button')
       charaButton.setAttribute ('id','charaButton')
