@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: white;
+  background: rgb(75, 78, 162);
+  background: linear-gradient(
+    90deg,
+    rgba(75, 78, 162, 1) 35%,
+    rgba(225, 68, 68, 1) 100%
+  );
+}
+
+
+
+/*header*/
+
+
+#header {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+  }
+
+
+
+h1 {
+  text-align: left;
+  margin: 4rem 0 1rem 0;
+  font-size: 2.5rem;
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  max-width: fit-content;
+}
+
+#search {
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgba(223, 219, 219, 0.884);
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    padding: 0.5rem;
+    margin: 4rem 0 1rem 0;
+    height: fit-content;
+    border: none;
+
+}
+
+hr.solid {
+    max-width: 90%;
+    border-top: 3px solid rgb(255, 255, 255);
+  }
+
+
+
+
+/*body*/
+
+
+  #root {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 2.6rem;
+    background: #363333;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    flex: 0 1 20%;
+  }
+  
+  .card:hover {
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+    transform: translate3D(0, -2px, 0);
+  }
+  
+  
+img {
+  display: center;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+img.rounded {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+
+h2 {
+    text-align: left;
+    padding: 1rem 1rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-family: "Permanent Marker", cursive;
+    color: white;
+  }
+
+p {
+  padding: 0 1rem 2rem;
+  margin: 0.5rem;
+  height: 250px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+#charaButton {
+    display: left;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: white;
+    background-color:#363333;
+    border-radius: 15px;
+    border-color: white;
+  }
+
+
+
+/*bottom*/
+
+
+  #bottom {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 4rem 4rem;
+  }
+
+
+#newButton {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: white;
+  background-color: #4b7cfb;
+  border-radius: 15px;
+}
+
