@@ -90,7 +90,8 @@ hr.solid {
   
   
 img {
-  display: center;
+  display: flex;
+  justify-self: center ;
   margin: 0 auto;
   height: 100%;
   width: auto;
