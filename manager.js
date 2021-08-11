@@ -33,7 +33,7 @@ bottom.appendChild(newButton)
 
 
 var request = new XMLHttpRequest()
-request.open('GET', 'https://character-database.becode.xyz/characters', true)
+request.open('GET', 'https://my-json-server.typicode.com/SporoZoite/user-api-server/characters', true)
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
