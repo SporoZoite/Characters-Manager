@@ -58,6 +58,7 @@ request.onload = function () {
       charaButton.innerText ='See character'
 
       container.appendChild(card)
+      card.appendChild(image)
       card.appendChild(h1)
       card.appendChild(p)
       card.appendChild(charaButton)
