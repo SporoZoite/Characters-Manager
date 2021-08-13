@@ -23,6 +23,9 @@ const bottom = document.getElementById("bottom");
 const newButton = document.createElement("button");
 newButton.setAttribute("id", "newButton");
 newButton.innerText = "Add new character to the collection";
+newButton.addEventListener("click", function () {
+ window.location.href="newchara.html"
+})
 
 up.appendChild(titre);
 up.appendChild(searchbox);
@@ -33,7 +36,7 @@ bottom.appendChild(newButton);
 var request = new XMLHttpRequest();
 request.open(
   "GET",
-  "https://my-json-server.typicode.com/SporoZoite/user-api-server/characters",
+  "https://my-json-server.typicode.com/SporoZoite/user-api-server",
   true
 );
 request.onload = function () {
@@ -63,7 +66,7 @@ request.onload = function () {
       charaButton.setAttribute("id", "charaButton");
       charaButton.addEventListener("click", async function () {
         const res = await fetch(
-          "https://my-json-server.typicode.com/SporoZoite/user-api-server/characters?" +
+          "https://my-json-server.typicode.com/SporoZoite/user-api-server?" +
             new URLSearchParams(params)
         );
         const hero = await res.json();
@@ -100,13 +103,30 @@ request.onload = function () {
             const deleteButton = document.createElement("button");
             deleteButton.setAttribute("id", "deleteButton");
             deleteButton.innerText = "Delete character";
+            deleteButton.addEventListener("click", async() => {
+              try {
+             let resp = await fetch("https://my-json-server.typicode.com/SporoZoite/user-api-server/"+ character.id , {
+            method: 'DELETE',
+            headers : {
+                'Content-Type':'application/json'}
+              });
+              if (!resp.ok) {
+                throw new Error ("ID not found");
+              }
+              else {
+                window.location.reload();
+              }
+            }catch (err) {
+              alert (err);
+            }
+            });
 
             const backButton = document.createElement("button");
             backButton.setAttribute("id", "backButton");
             backButton.innerText = "<Back";
             backButton.addEventListener("click", async function () {
-             container.removeChild(cardSolo);
-            })
+              container.removeChild(cardSolo);
+            });
 
             container.appendChild(cardSolo);
             cardSolo.appendChild(image);

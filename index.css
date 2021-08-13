@@ -259,3 +259,92 @@ p {
   border-radius: 15px;
 }
 
+/*newchara*/
+
+#name{
+  display: flex;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  text-align:left;
+  width:95%;
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 20px;
+  background-color: grey;
+  border-color: honeydew;
+}
+
+#shortDescription{
+  display: flex;
+  margin: 2rem auto;
+  padding: 1rem 2rem 1rem 2rem;
+  text-align:left;
+  width:95%;
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: grey;
+  border-color: honeydew;
+}
+
+#description{
+  display: flex;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  text-align:left;
+  width:95%;
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  background-color: grey;
+  border-color: honeydew;
+
+}
+
+
+
+#drop-region {
+  display: flex;
+  justify-self: center ;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+    background-color: #363333;
+    border-radius:50%;
+    border-color: white;
+    border-style:solid;
+    width:250px;
+    height: 250px;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor:pointer;
+    transition:.3s;
+  
+}
+
+.drop-message {
+  position: absolute;
+ 
+}
+
+
+#drop-region:hover {
+    box-shadow:0 0 45px rgba(0,0,0,0.1);
+
+}
+ 
+#image-preview {
+    margin:0;
+}
+
+#image-preview .image-view img {
+    width: 250px;
+    height: 250px;
+   
+    
+}
