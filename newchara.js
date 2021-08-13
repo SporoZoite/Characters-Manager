@@ -173,7 +173,7 @@ updateButton.addEventListener("click",async() =>{
       let id = null;
  
   
-      const postData = await fetch("https://my-json-server.typicode.com/SporoZoite/user-api-server", {
+      const postData = await fetch("https://my-json-server.typicode.com/SporoZoite/user-api-server/characters", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -193,7 +193,7 @@ deleteButton.innerText = "Delete character";
 buttonSolo.appendChild(deleteButton);
 deleteButton.addEventListener("click", async() => {
             try {
-            let resp = await fetch("https://my-json-server.typicode.com/SporoZoite/user-api-server/"+ character.id , {
+            let resp = await fetch("https://my-json-server.typicode.com/SporoZoite/user-api-server/characters/"+ character.id , {
             method: 'DELETE',
             headers : {
                 'Content-Type':'application/json'}

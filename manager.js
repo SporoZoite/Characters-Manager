@@ -36,7 +36,7 @@ bottom.appendChild(newButton);
 var request = new XMLHttpRequest();
 request.open(
   "GET",
-  "https://my-json-server.typicode.com/SporoZoite/user-api-server",
+  "https://my-json-server.typicode.com/SporoZoite/user-api-server/characters",
   true
 );
 request.onload = function () {
@@ -66,7 +66,7 @@ request.onload = function () {
       charaButton.setAttribute("id", "charaButton");
       charaButton.addEventListener("click", async function () {
         const res = await fetch(
-          "https://my-json-server.typicode.com/SporoZoite/user-api-server?" +
+          "https://my-json-server.typicode.com/SporoZoite/user-api-server/characters?" +
             new URLSearchParams(params)
         );
         const hero = await res.json();
@@ -105,7 +105,7 @@ request.onload = function () {
             deleteButton.innerText = "Delete character";
             deleteButton.addEventListener("click", async() => {
               try {
-             let resp = await fetch("https://my-json-server.typicode.com/SporoZoite/user-api-server/"+ character.id , {
+             let resp = await fetch("https://my-json-server.typicode.com/SporoZoite/user-api-server/characters/"+ character.id , {
             method: 'DELETE',
             headers : {
                 'Content-Type':'application/json'}
